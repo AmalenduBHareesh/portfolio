@@ -1099,22 +1099,27 @@ footer .footer-links a:hover { color: white; }
     </div>
 
     <div class="contact-form">
-      <h4>Send a message</h4>
-      <div class="form-row">
-        <label class="form-label">Your name</label>
-        <input type="text" class="form-input" placeholder="Enter your name">
-      </div>
-      <div class="form-row">
-        <label class="form-label">Email address</label>
-        <input type="email" class="form-input" placeholder="name@company.com">
-      </div>
-      <div class="form-row">
-        <label class="form-label">Message</label>
-        <textarea class="form-input" placeholder="Hi Amalendu, I came across your portfolio..."></textarea>
-      </div>
-      <button class="form-submit" onclick="handleFormSubmit(this)">Send Message</button>
+  <h4>Send a message</h4>
+  <form action="https://api.web3forms.com/submit" method="POST">
+    
+    <input type="hidden" name="access_key" value="8d9b0032-401b-440c-a99f-5eaadc1ea07e">
+    <input type="hidden" name="subject" value="New message from Portfolio">
+
+    <div class="form-row">
+      <label class="form-label">Your name</label>
+      <input type="text" name="name" class="form-input" placeholder="Jane Smith" required>
     </div>
-  </div>
+    <div class="form-row">
+      <label class="form-label">Email address</label>
+      <input type="email" name="email" class="form-input" placeholder="jane@company.com" required>
+    </div>
+    <div class="form-row">
+      <label class="form-label">Message</label>
+      <textarea name="message" class="form-input" placeholder="Hi Amalendu..."></textarea>
+    </div>
+    <button type="submit" class="form-submit">Send Message</button>
+  </form>
+</div>
 </section>
 
 <!-- FOOTER -->
